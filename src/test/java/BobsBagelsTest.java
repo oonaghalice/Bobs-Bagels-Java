@@ -1,20 +1,29 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class BobsBagelsTest {
 
     @Test
-    @DisplayName("Add to basket:")
+    @DisplayName("Add to basket and check the basket has only 1 item")
     void add(){
         //Arrange
-        Basket b1 = new Basket();
+        Set<String> Basket = new HashSet<String>();
 
         //Act
-        b1.add("Bagel");
+       Basket.add("Bagel");
         //Assert
-        assertEquals(b1.newBasketItems.length, 1);
+
+        int result = Basket.toArray().length;
+        assertEquals(result,1);
+        System.out.println("Basket Length is " +""+ result);
     }
+
+
 
 }

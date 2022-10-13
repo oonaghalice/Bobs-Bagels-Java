@@ -9,8 +9,5 @@ public class Basket {
 //        this.basketItems = basketItems;
 //    }
 
-        public static void add() {
-            ArrayList<String> newBasketItems = new ArrayList<String>(Arrays.asList(basketItems));
-            newBasketItems.add(item);
-        }
     }
+}
