@@ -1,13 +1,20 @@
 import java.util.*;
 public class Basket {
+
+    public Basket() {
+        String item;
+        int capacity;
+    }
+
     public static void main(String[] args) {
 
-        String[] basketItems;
-        String item;
+        ArrayList<String> basketItems = new ArrayList<>();
 
-//    public Basket(String[] basketItems) {
-//        this.basketItems = basketItems;
-//    }
+        //Add an item to basket
+        basketItems.add("item");
+
+        //Remove an item from basket
+        basketItems.remove("item");
 
     }
 }
