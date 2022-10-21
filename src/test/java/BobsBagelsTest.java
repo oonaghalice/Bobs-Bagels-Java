@@ -15,28 +15,42 @@ public class BobsBagelsTest {
         Basket basket = new Basket();
 
         //Act
-       basket.basketItems.add("Bagel");
+       basket.addItem("Bagel");
 
         //Assert
-        int result = basketItems.toArray().length;
+        int result = basket.basketItems.toArray().length;
         assertEquals(result,1);
         System.out.println("Basket Length is " +" "+ result);
     }
 
     @Test
     @DisplayName("Remove from basket and check the basket has only 0 item")
-    void add(){
+    void remove(){
         //Arrange
         Basket basket = new Basket();
 
         //Act
-        basket.basketItems.add("Bagel");
-        basket.basketItems.remove("Bagel");
+        basket.addItem("Bagel");
+        basket.removeItem("Bagel");
 
         //Assert
-        int result = basketItems.toArray().length;
+        int result = basket.basketItems.toArray().length;
         assertEquals(result,0);
         System.out.println("Basket Length is " +" "+ result);
+    }
+
+    @Test
+    @DisplayName("Cannot remove item that doesn't exist in basket")
+    void itemNotInBasket(){
+        //Arrange
+        Basket basket = new Basket();
+
+        //Act
+        String result =basket.removeItem("Ice Cream");
+        //Assert
+
+        assertEquals(result ,"Item is not in basket.");
+        //System.out.println("Basket Length is " +" "+ result);
     }
 
 
